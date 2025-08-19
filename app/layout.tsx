@@ -20,7 +20,7 @@ export default function RootLayout({
             <Link href="./">Futurama Characters</Link>
           </h1>
         </header>
-        <main className="grid justify-center items-center h-[calc(100vh-74px)] p-4">
+        <main className="grid justify-center items-center h-[calc(100vh-74px)]">
           {children}
         </main>
       </body>

@@ -16,8 +16,8 @@ export default async function Rest() {
 
     return (
         <>
-        <h2 className="text-zinc-200 text-2xl my-4">Fetched with REST API</h2>
-        <div className="grid grid-cols-4 gap-4">
+        <h2 className="text-zinc-200 text-2xl m-4">Fetched with REST API</h2>
+        <div className="grid grid-cols-4 gap-4 mx-4">
             {characters.map((character) => (
             <div key={character.id} className="bg-zinc-200 border rounded-2xl grid grid-cols-subgrid gap-4 overflow-hidden">
                 {character.image ? (
