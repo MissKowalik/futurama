@@ -18,15 +18,20 @@ const query = `
 `;
 
 export async function getCharactersGraphQL() {
-  const response = await fetch(endpoint, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ query: query }),
-  });
+  try {
+    const response = await fetch(endpoint, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query: query }),
+    });
 
-  const result = await response.json();
-  const characters: Character[] = result.data.characters.edges;
-  return characters;
+    const result = await response.json();
+    const characters: Character[] = result.data.characters.edges;
+    return characters;
+    
+  } catch (error) {
+    console.error("Something went wrong:", error);
+  }
 }
